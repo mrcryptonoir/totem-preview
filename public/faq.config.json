@@ -1,0 +1,12 @@
+{
+  "name": "Totem",
+  "description": "Private AI assistant — runs entirely in your browser, no server required",
+  "faqSource": "/faq-data.json",
+  "branding": {
+    "title": "Totem",
+    "subtitle": "Your private AI — runs entirely in your browser",
+    "accentColor": "#2563eb"
+  },
+  "model": "Qwen3.5-2B-q4f16_1-MLC",
+  "noMatchMessage": "I don't have information about that yet. Here are some topics I can help with:"
+}
