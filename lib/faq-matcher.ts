@@ -113,9 +113,14 @@ export async function loadFaqData(): Promise<void> {
   }
 
   loadPromise = (async () => {
+    // Next.js inlines NEXT_PUBLIC_* vars at build time. When the app is served
+    // from a sub-path (e.g. GitHub Pages: /repo-name/), raw fetch() calls need
+    // the base path prepended — Next.js basePath only affects its own router.
+    const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
     try {
       // Load config
-      const configRes = await fetch("/faq.config.json");
+      const configRes = await fetch(`${BASE_PATH}/faq.config.json`);
       if (configRes.ok) {
         loadedConfig = await configRes.json();
       }
@@ -123,7 +128,10 @@ export async function loadFaqData(): Promise<void> {
       // Only allow same-origin or relative paths for faqSource to prevent
       // the config from being redirected to an attacker-controlled endpoint.
       const rawSource = loadedConfig?.faqSource ?? "/faq-data.json";
-      const source = isSafeSource(rawSource) ? rawSource : "/faq-data.json";
+      const safeSource = isSafeSource(rawSource) ? rawSource : "/faq-data.json";
+      // Prepend the base path for root-relative paths so the fetch resolves
+      // correctly when the app is deployed under a sub-path.
+      const source = safeSource.startsWith("/") ? `${BASE_PATH}${safeSource}` : safeSource;
 
       const dataRes = await fetch(source);
       if (!dataRes.ok) {
