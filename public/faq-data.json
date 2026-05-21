@@ -1,0 +1,72 @@
+{
+  "faq": [
+    {
+      "id": "what-is-totem",
+      "question": "What is Totem?",
+      "keywords": ["what", "totem", "product", "about", "this", "is"],
+      "answer": "Totem is a private AI assistant that runs entirely inside your browser. You visit the URL, download the model once, and have a capable AI available from any supported browser — with no server, no API key, no account, and no data ever leaving your device. All inference happens locally using WebLLM and WebGPU."
+    },
+    {
+      "id": "perpetual-prompt",
+      "question": "What is a Perpetual Prompt?",
+      "keywords": ["perpetual", "prompt", "system", "prompt", "persistent", "instructions", "customize", "behaviour"],
+      "answer": "The Perpetual Prompt is a system prompt that is silently prepended to every conversation you have with Totem. It lets you give the AI standing instructions — for example, your name, your job, your preferred tone, or any context you always want the assistant to have. You can edit it at any time by clicking the 'Perpetual Prompt' button in the top bar. Changes take effect on your next message."
+    },
+    {
+      "id": "totem-builder",
+      "question": "What is the Totem Builder?",
+      "keywords": ["totem", "builder", "faq", "knowledge", "base", "entries", "custom", "add", "data"],
+      "answer": "The Totem Builder is a built-in knowledge base editor. You can add your own question-and-answer entries — notes, facts, documentation, or anything you want Totem to know about. When you ask a question, Totem automatically searches your entries and uses the most relevant ones as context for its answer. Open it with the 'Totem Builder' button in the top bar."
+    },
+    {
+      "id": "privacy",
+      "question": "Is my data private?",
+      "keywords": ["private", "privacy", "data", "secure", "security", "gdpr", "server", "sent", "shared"],
+      "answer": "Yes — completely private. The language model runs entirely in your browser using WebGPU. No messages, no conversation history, and no personal data are ever sent to any external server. There is no backend, no analytics, and no tracking. Your conversations are stored only in your browser's IndexedDB, on your device."
+    },
+    {
+      "id": "how-it-works",
+      "question": "How does Totem work?",
+      "keywords": ["how", "work", "technology", "webgpu", "webllm", "architecture", "model", "inference"],
+      "answer": "Totem uses WebLLM to run a quantized language model directly in your browser via WebGPU. The model runs in a Web Worker so the UI stays responsive during generation. On first use, the model weights are downloaded once (~500MB–2GB depending on the model) and then cached in your browser for instant subsequent loads. Your knowledge base entries from the Totem Builder are matched against your questions and injected as context."
+    },
+    {
+      "id": "offline",
+      "question": "Does Totem work offline?",
+      "keywords": ["offline", "internet", "connection", "pwa", "network", "without"],
+      "answer": "Yes. After the initial model download, Totem works fully offline. The model is cached in your browser, and the app is served as a static site that can be installed as a PWA. You can use it on a plane, in a coffee shop with no Wi-Fi, or anywhere else — no internet connection needed."
+    },
+    {
+      "id": "browser-requirements",
+      "question": "What browser does Totem require?",
+      "keywords": ["browser", "requirements", "webgpu", "chrome", "compatible", "support", "device", "gpu"],
+      "answer": "Totem requires a browser with WebGPU support. Chrome 113+ and other Chromium-based browsers (Edge, Brave, Arc) work best. Your device needs a GPU with at least 4GB of memory for the default model. WebGPU is not currently available in Firefox or Safari by default. If your GPU doesn't meet requirements, Totem will warn you before you start a download."
+    },
+    {
+      "id": "conversations",
+      "question": "Are my conversations saved?",
+      "keywords": ["saved", "history", "conversations", "threads", "persist", "remember", "storage"],
+      "answer": "Yes. All conversation threads are saved automatically in your browser's IndexedDB. You can return to any previous conversation from the sidebar on the left. Your conversations never leave your device — they are stored entirely locally."
+    },
+    {
+      "id": "cost",
+      "question": "Does Totem cost anything?",
+      "keywords": ["cost", "price", "free", "pricing", "pay", "money", "subscription"],
+      "answer": "Totem Preview is free to use. Since all inference happens in your browser, there are no API costs, no per-message fees, and no subscription required. Your only cost is the electricity your GPU uses during inference."
+    },
+    {
+      "id": "model-download",
+      "question": "Why does Totem need to download a model?",
+      "keywords": ["download", "model", "size", "large", "why", "first", "time", "weights"],
+      "answer": "To run AI inference locally in your browser, the model weights need to be present on your device. The download happens once and is then cached by your browser — subsequent loads are instant. The default model is around 500MB–2GB depending on which model is selected. You can see download progress on the loading screen."
+    }
+  ],
+  "followUpTopics": [
+    "What is Totem?",
+    "What is a Perpetual Prompt?",
+    "What is the Totem Builder?",
+    "Is my data private?",
+    "Does Totem work offline?",
+    "What browser does Totem require?"
+  ]
+}
