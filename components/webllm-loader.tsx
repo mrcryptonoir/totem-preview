@@ -373,6 +373,20 @@ export function WebLLMLoader({
               The engine encountered an error while loading. This can happen due
               to insufficient GPU memory or a temporary browser issue.
             </p>
+            <p className="text-xs text-muted-foreground mt-2">
+              Your browser or computer may not be able to handle this model. However, your
+              computer may still be suitable for{" "}
+              <span className="font-medium text-foreground">Totem Desktop</span>. Follow{" "}
+              <a
+                href="https://t.me/OfficialTotemToken"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline text-primary"
+              >
+                our Telegram
+              </a>{" "}
+              for updates.
+            </p>
           </div>
           <div className="w-full rounded-md bg-muted px-4 py-3 text-left">
             <p className="text-xs font-mono text-muted-foreground break-all">
